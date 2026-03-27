@@ -537,62 +537,22 @@ function renderProjects() {
       (project) => `
         <article class="project-card ${project.caseStudy ? "project-card-featured" : ""} ${project.caseType === "企业项目" ? "project-card-enterprise" : "project-card-product"}">
           <div class="project-layout">
-            <div class="project-side">
-              <div class="project-cover" style="background:${project.theme}">
-                <div class="project-meta">
-                  <span>${project.caseType || "项目案例"}</span>
-                  <span>${project.category}</span>
-                  <span>${project.year}</span>
-                </div>
-
-                <div class="project-cover-copy">
-                  <p class="project-kicker">${project.caseType === "企业项目" ? "Enterprise Case" : "Product Case"}</p>
-                  <h3>${project.title}</h3>
-                  <p>${project.summary}</p>
-                </div>
+            <div class="project-rail">
+              <div class="project-meta">
+                <span>${project.caseType || "项目案例"}</span>
+                <span>${project.category}</span>
+                <span>${project.year}</span>
               </div>
 
-              ${
-                project.caseStudy?.screenshots?.length
-                  ? `
-                    <div class="project-side-media">
-                      ${project.caseStudy.screenshots
-                        .slice(0, 2)
-                        .map(
-                          (shot) => `
-                            <figure class="project-side-shot">
-                              <img src="${shot.image}" alt="${shot.title}" loading="lazy" />
-                            </figure>
-                          `
-                        )
-                        .join("")}
-                    </div>
-                  `
-                  : `
-                    <div class="project-side-modules">
-                      ${project.caseStudy?.modules
-                        ?.slice(0, 3)
-                        .map(
-                          (module) => `
-                            <div class="project-side-module">
-                              <strong>${module.title}</strong>
-                              <span>${module.text}</span>
-                            </div>
-                          `
-                        )
-                        .join("") || ""}
-                    </div>
-                  `
-              }
-            </div>
+              <div class="project-title-group">
+                <p class="project-kicker">${project.caseType === "企业项目" ? "Enterprise Case" : "Product Case"}</p>
+                <h3>${project.title}</h3>
+                <p class="project-description">${project.summary}</p>
+              </div>
 
-            <div class="project-copy">
-              <div class="project-head">
-                <div>
-                  <h3>${project.title}</h3>
-                  <p class="project-description">${project.summary}</p>
-                </div>
-                <div class="project-role-tag">${project.role}</div>
+              <div class="project-role-block">
+                <span>角色</span>
+                <strong>${project.role}</strong>
               </div>
 
               <div class="project-tags">
@@ -618,6 +578,22 @@ function renderProjects() {
                   : ""
               }
 
+              <div class="project-links">
+                ${project.links
+                  .map(
+                    (link) => `
+                      ${
+                        link.copyValue
+                          ? `<button class="inline-link inline-button" type="button" data-copy-value="${link.copyValue}">${link.label}</button>`
+                          : `<a class="inline-link" href="${link.href}" target="_blank" rel="noreferrer">${link.label}</a>`
+                      }
+                    `
+                  )
+                  .join("")}
+              </div>
+            </div>
+
+            <div class="project-copy">
               <div class="project-highlights">
                 ${project.highlights
                   .map(
@@ -648,28 +624,6 @@ function renderProjects() {
                         </summary>
 
                         <div class="case-details-body">
-                          ${
-                            project.caseStudy.screenshots.length
-                              ? `
-                                <div class="shot-grid">
-                                  ${project.caseStudy.screenshots
-                                    .map(
-                                      (shot) => `
-                                        <figure class="shot-card">
-                                          <img src="${shot.image}" alt="${shot.title}" loading="lazy" />
-                                          <figcaption>
-                                            <strong>${shot.title}</strong>
-                                            <span>${shot.text}</span>
-                                          </figcaption>
-                                        </figure>
-                                      `
-                                    )
-                                    .join("")}
-                                </div>
-                              `
-                              : ""
-                          }
-
                           <div class="case-grid">
                             <div class="case-block case-block-emphasis">
                               <strong>我负责的内容</strong>
@@ -727,20 +681,6 @@ function renderProjects() {
                   `
                   : ""
               }
-
-              <div class="project-links">
-                ${project.links
-                  .map(
-                    (link) => `
-                      ${
-                        link.copyValue
-                          ? `<button class="inline-link inline-button" type="button" data-copy-value="${link.copyValue}">${link.label}</button>`
-                          : `<a class="inline-link" href="${link.href}" target="_blank" rel="noreferrer">${link.label}</a>`
-                      }
-                    `
-                  )
-                  .join("")}
-              </div>
             </div>
           </div>
         </article>
