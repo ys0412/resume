@@ -158,6 +158,9 @@ a.button {
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.86fr);
+  grid-template-areas:
+    "copy panel"
+    "stats panel";
   gap: 1.6rem;
   align-items: start;
   padding: 2.3rem 0 1.1rem;
@@ -174,6 +177,7 @@ a.button {
 }
 
 .hero-copy {
+  grid-area: copy;
   padding: 0.35rem 0 0;
 }
 
@@ -280,10 +284,11 @@ a.button {
 }
 
 .hero-stats {
+  grid-area: stats;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
-  margin-top: 1.8rem;
+  margin-top: 0.2rem;
 }
 
 .stat {
@@ -314,6 +319,7 @@ a.button {
 }
 
 .hero-panel {
+  grid-area: panel;
   display: grid;
   gap: 0.9rem;
   align-content: start;
@@ -447,7 +453,7 @@ a.button {
   grid-column: span 6;
   display: flex;
   flex-direction: column;
-  gap: 1.15rem;
+  gap: 0;
   padding: 1.15rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
@@ -468,11 +474,27 @@ a.button {
   box-shadow: 0 24px 56px rgba(16, 35, 44, 0.11);
 }
 
+.project-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  gap: 1.15rem;
+  align-items: start;
+}
+
+.project-card-featured .project-layout {
+  grid-template-columns: minmax(320px, 0.76fr) minmax(0, 1.24fr);
+}
+
+.project-side {
+  display: grid;
+  gap: 0.8rem;
+}
+
 .project-cover {
   position: relative;
   overflow: hidden;
   border-radius: calc(var(--radius-xl) - 8px);
-  aspect-ratio: 16 / 9;
+  min-height: 240px;
   padding: 1.1rem 1.15rem;
   color: white;
   display: flex;
@@ -487,14 +509,6 @@ a.button {
   inset: auto 0 0 0;
   height: 48%;
   background: linear-gradient(180deg, transparent, rgba(5, 14, 18, 0.28));
-}
-
-.project-card-featured .project-cover {
-  aspect-ratio: auto;
-  min-height: 182px;
-  padding: 1.15rem;
-  justify-content: flex-start;
-  gap: 0.95rem;
 }
 
 .project-meta {
@@ -580,6 +594,51 @@ a.button {
 .project-copy {
   display: grid;
   gap: 0.95rem;
+}
+
+.project-side-media,
+.project-side-modules {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.project-side-media {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-side-shot {
+  margin: 0;
+  overflow: hidden;
+  min-height: 160px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(22, 32, 41, 0.08);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.project-side-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-side-module {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(22, 32, 41, 0.06);
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.project-side-module strong {
+  font-size: 0.92rem;
+}
+
+.project-side-module span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
 }
 
 .project-head {
@@ -1077,11 +1136,20 @@ a.button {
   }
 
   .hero {
+    grid-template-areas:
+      "copy"
+      "stats"
+      "panel";
     gap: 1rem;
   }
 
   .project-card {
     grid-column: span 12;
+  }
+
+  .project-layout,
+  .project-card-featured .project-layout {
+    grid-template-columns: 1fr;
   }
 
   .module-grid {
@@ -1092,6 +1160,10 @@ a.button {
   .case-grid,
   .project-highlights {
     grid-template-columns: 1fr;
+  }
+
+  .project-side-media {
+    grid-template-columns: 1fr 1fr;
   }
 
   .case-block-wide {
@@ -1151,6 +1223,10 @@ a.button {
   .case-summary-toggle {
     flex-direction: column;
     align-items: start;
+  }
+
+  .project-side-media {
+    grid-template-columns: 1fr;
   }
 
   .site-footer {
