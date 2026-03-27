@@ -1,0 +1,9 @@
+.DS_Store
+resume.tar.gz
+.idea/
+.vscode/
+assets/photograph-*.png
+assets/portfolio-*.png
+wechat-shots/wechat-*.png
+wechat-shots/miniprogram-current.png
+wechat-shots/miniprogram-current-step.png

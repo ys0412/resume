@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>喻盛 | Java 后端开发工程师作品集</title>
+    <meta
+      name="description"
+      content="喻盛的个人作品集，展示 Java 后端开发、微信小程序独立项目、金融系统经验与代表性项目案例。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260327-1537" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="ambient ambient-left"></div>
+      <div class="ambient ambient-right"></div>
+
+      <header class="site-header section">
+        <a class="brand" href="#top">
+          <span class="brand-mark">PF</span>
+          <span>
+            <strong id="brand-name">你的名字</strong>
+            <small id="brand-subtitle">Portfolio</small>
+          </span>
+        </a>
+
+        <nav class="nav">
+          <a href="#projects">项目</a>
+          <a href="#experience">经历</a>
+          <a href="#skills">技能</a>
+          <a href="#contact">联系</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero section reveal">
+          <div class="hero-copy">
+            <p class="eyebrow">PROJECT PORTFOLIO / 2026</p>
+            <h1>
+              把后端系统和小程序
+              <span>做成真正能上线的产品。</span>
+            </h1>
+            <p class="hero-text" id="hero-summary"></p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">查看项目</a>
+              <a class="button button-secondary" href="#contact">联系合作</a>
+            </div>
+
+            <div class="hero-stats" id="hero-stats"></div>
+          </div>
+
+          <aside class="hero-panel">
+            <div class="panel-card">
+              <p class="panel-label">当前定位</p>
+              <h2 id="hero-role"></h2>
+              <p id="hero-location"></p>
+            </div>
+
+            <div class="panel-card">
+              <p class="panel-label">我擅长的事情</p>
+              <div class="chip-cloud" id="hero-highlights"></div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="featured section reveal" id="projects">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">SELECTED WORK</p>
+              <h2>精选项目</h2>
+            </div>
+            <p>
+              聚焦真实工作项目和独立产品，既展示业务场景，也展示我在系统建设中的具体职责。
+            </p>
+          </div>
+
+          <div class="filters" id="project-filters">
+            <button class="filter-button active" type="button">主打项目</button>
+          </div>
+          <div class="project-grid" id="project-grid">
+            <article class="project-card project-card-featured">
+              <div
+                class="project-cover"
+                style="background: linear-gradient(135deg, #2a3445 0%, #0d8b84 100%)"
+              >
+                <div class="project-meta">
+                  <span>微信小程序</span>
+                  <span>2026</span>
+                  <span>小程序 / 后台 / 服务端全链路开发</span>
+                </div>
+
+                <div class="project-cover-copy">
+                  <p class="project-kicker">Featured Case</p>
+                  <h3>摄影器材通小程序</h3>
+                  <p>
+                    面向摄影爱好者的摄影器材服务项目，覆盖微信小程序、后台管理、服务端接口和器材数据整理。
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-copy">
+                <div class="project-head">
+                  <div>
+                    <h3>摄影器材通小程序</h3>
+                    <p class="project-description">
+                      面向摄影爱好者的摄影器材服务项目，覆盖微信小程序、后台管理、服务端接口和器材数据整理，帮助用户完成查找、对比、收藏和管理个人设备。
+                    </p>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="chip">微信小程序</span>
+                  <span class="chip">Vue / uni-app</span>
+                  <span class="chip">Java</span>
+                  <span class="chip">后台管理</span>
+                </div>
+
+                <div class="shot-grid">
+                  <figure class="shot-card shot-card-featured">
+                    <img src="./wechat-shots/miniprogram-window-1.png" alt="摄影器材通首页推荐" loading="lazy" />
+                    <figcaption>
+                      <strong>首页推荐</strong>
+                      <span>展示轮播推荐、快捷功能入口和热门机身 / 镜头内容。</span>
+                    </figcaption>
+                  </figure>
+
+                  <figure class="shot-card">
+                    <img src="./wechat-shots/miniprogram-library.png" alt="摄影器材通器材库" loading="lazy" />
+                    <figcaption>
+                      <strong>器材库</strong>
+                      <span>按相机、镜头与品牌分类浏览，帮助用户快速进入器材列表。</span>
+                    </figcaption>
+                  </figure>
+
+                  <figure class="shot-card">
+                    <img src="./wechat-shots/miniprogram-comparison-direct.png" alt="摄影器材通器材对比" loading="lazy" />
+                    <figcaption>
+                      <strong>器材对比</strong>
+                      <span>提供产品加入对比的入口，面向真实选购和参数比较场景。</span>
+                    </figcaption>
+                  </figure>
+
+                  <figure class="shot-card">
+                    <img src="./wechat-shots/miniprogram-current-step-2.png" alt="摄影器材通详情页" loading="lazy" />
+                    <figcaption>
+                      <strong>详情页</strong>
+                      <span>展示产品大图、价格、标签、AI 总结入口与收藏 / 对比操作。</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="case-study">
+                  <div class="case-block">
+                    <strong>我负责的内容</strong>
+                    <div class="case-list">
+                      <span>负责小程序端核心页面设计与实现，包括首页推荐、器材库、详情、对比、收藏、浏览记录和我的设备。</span>
+                      <span>负责后台管理功能整理与接入，覆盖相机管理、镜头管理、封面上传和 Banner 维护等内容运营能力。</span>
+                      <span>负责 Spring Boot 服务端接口设计与联调，并处理摄影器材数据采集、清洗和结构化整理。</span>
+                    </div>
+                  </div>
+
+                  <div class="case-block">
+                    <strong>项目价值</strong>
+                    <p>
+                      这不是单一页面展示，而是一套从器材数据采集、内容维护到小程序消费的完整产品闭环。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="experience section reveal" id="experience">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">TIMELINE</p>
+              <h2>项目经历</h2>
+            </div>
+            <p>
+              从金融信息披露到独立小程序产品，时间线对应的是业务场景、技术深度和交付能力。
+            </p>
+          </div>
+
+          <div class="timeline" id="timeline"></div>
+        </section>
+
+        <section class="skills section reveal" id="skills">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">CAPABILITIES</p>
+              <h2>技能与方法</h2>
+            </div>
+            <p>
+              这里不只列技术名词，更说明我如何把后端、数据库、小程序和第三方能力组合成可交付方案。
+            </p>
+          </div>
+
+          <div class="skill-columns">
+            <div class="skill-panel">
+              <h3>核心优势</h3>
+              <div class="capability-list" id="capability-list"></div>
+            </div>
+
+            <div class="skill-panel">
+              <h3>工具栈</h3>
+              <div class="toolbox" id="toolbox"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact section reveal" id="contact">
+          <div class="contact-card">
+            <div>
+              <p class="eyebrow">LET'S BUILD</p>
+              <h2>如果你想找人一起把项目做得更完整，我们可以聊聊。</h2>
+            </div>
+
+            <div class="contact-actions" id="contact-actions"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer section">
+        <p>这里展示的是我的真实项目与经历，后续还会继续补充更多截图、成果数据和案例细节。</p>
+        <p><span id="current-year"></span> · Yusheng Portfolio.</p>
+      </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="关闭预览">
+        关闭
+      </button>
+      <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+      <figure class="lightbox-figure">
+        <img id="lightbox-image" alt="" />
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+    </div>
+
+    <script src="./app.js?v=20260327-1537"></script>
+  </body>
+</html>
