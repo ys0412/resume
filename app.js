@@ -598,88 +598,95 @@ function renderProjects() {
             ${
               project.caseStudy
                 ? `
-                  <div class="case-study">
-                    <div class="case-study-header">
-                      <div>
-                        <p class="case-kicker">${project.caseType === "企业项目" ? "Business Context" : "Product Overview"}</p>
-                        <h4>${project.caseStudy.summaryTitle || project.summary}</h4>
-                      </div>
+                  <div class="case-preview">
+                    <div class="case-preview-copy">
+                      <p class="case-kicker">${project.caseType === "企业项目" ? "Business Context" : "Product Overview"}</p>
+                      <h4>${project.caseStudy.summaryTitle || project.summary}</h4>
                       <p>${project.caseStudy.background}</p>
                     </div>
 
-                    ${
-                      project.caseStudy.screenshots.length
-                        ? `
-                          <div class="shot-grid">
-                            ${project.caseStudy.screenshots
-                              .map(
-                                (shot) => `
-                                  <figure class="shot-card">
-                                    <img src="${shot.image}" alt="${shot.title}" loading="lazy" />
-                                    <figcaption>
-                                      <strong>${shot.title}</strong>
-                                      <span>${shot.text}</span>
-                                    </figcaption>
-                                  </figure>
-                                `
-                              )
-                              .join("")}
-                          </div>
-                        `
-                        : ""
-                    }
+                    <details class="case-details">
+                      <summary class="case-summary-toggle">
+                        <span>查看完整案例</span>
+                        <small>展开职责、功能、架构与结果</small>
+                      </summary>
 
-                    <div class="case-grid">
-                      <div class="case-block case-block-emphasis">
-                        <strong>我负责的内容</strong>
-                        <div class="case-list">
-                          ${project.caseStudy.ownership
-                            .map((item) => `<span>${item}</span>`)
-                            .join("")}
-                        </div>
-                      </div>
+                      <div class="case-details-body">
+                        ${
+                          project.caseStudy.screenshots.length
+                            ? `
+                              <div class="shot-grid">
+                                ${project.caseStudy.screenshots
+                                  .map(
+                                    (shot) => `
+                                      <figure class="shot-card">
+                                        <img src="${shot.image}" alt="${shot.title}" loading="lazy" />
+                                        <figcaption>
+                                          <strong>${shot.title}</strong>
+                                          <span>${shot.text}</span>
+                                        </figcaption>
+                                      </figure>
+                                    `
+                                  )
+                                  .join("")}
+                              </div>
+                            `
+                            : ""
+                        }
 
-                      <div class="case-block">
-                        <strong>核心功能</strong>
-                        <div class="case-list">
-                          ${project.caseStudy.features
-                            .map((item) => `<span>${item}</span>`)
-                            .join("")}
-                        </div>
-                      </div>
-
-                      <div class="case-block">
-                        <strong>技术架构</strong>
-                        <div class="case-list">
-                          ${project.caseStudy.architecture
-                            .map((item) => `<span>${item}</span>`)
-                            .join("")}
-                        </div>
-                      </div>
-
-                      <div class="case-block">
-                        <strong>关键难点</strong>
-                        <p>${project.caseStudy.challenge}</p>
-                      </div>
-
-                      <div class="case-block case-block-wide">
-                        <strong>项目价值</strong>
-                        <p>${project.caseStudy.result}</p>
-                      </div>
-                    </div>
-
-                    <div class="module-grid">
-                      ${project.caseStudy.modules
-                        .map(
-                          (module) => `
-                            <div class="module-card">
-                              <strong>${module.title}</strong>
-                              <p>${module.text}</p>
+                        <div class="case-grid">
+                          <div class="case-block case-block-emphasis">
+                            <strong>我负责的内容</strong>
+                            <div class="case-list">
+                              ${project.caseStudy.ownership
+                                .map((item) => `<span>${item}</span>`)
+                                .join("")}
                             </div>
-                          `
-                        )
-                        .join("")}
-                    </div>
+                          </div>
+
+                          <div class="case-block">
+                            <strong>核心功能</strong>
+                            <div class="case-list">
+                              ${project.caseStudy.features
+                                .map((item) => `<span>${item}</span>`)
+                                .join("")}
+                            </div>
+                          </div>
+
+                          <div class="case-block">
+                            <strong>技术架构</strong>
+                            <div class="case-list">
+                              ${project.caseStudy.architecture
+                                .map((item) => `<span>${item}</span>`)
+                                .join("")}
+                            </div>
+                          </div>
+
+                          <div class="case-block">
+                            <strong>关键难点</strong>
+                            <p>${project.caseStudy.challenge}</p>
+                          </div>
+
+                          <div class="case-block case-block-wide">
+                            <strong>项目价值</strong>
+                            <p>${project.caseStudy.result}</p>
+                          </div>
+                        </div>
+
+                        <div class="module-grid">
+                          ${project.caseStudy.modules
+                            .map(
+                              (module) => `
+                                <div class="module-card">
+                                  <strong>${module.title}</strong>
+                                  <p>${module.text}</p>
+                                </div>
+                              `
+                            )
+                            .join("")}
+                        </div>
+                      </div>
+                    </details>
                   </div>
                 `
                 : ""
