@@ -21,13 +21,20 @@ const portfolioData = {
     {
       title: "摄影器材通小程序",
       category: "微信小程序",
+      caseType: "独立产品",
       year: "2026",
       role: "小程序 / 后台 / 服务端全链路开发",
       summary:
         "面向摄影爱好者的摄影器材服务项目，覆盖微信小程序、后台管理、服务端接口和器材数据整理，帮助用户完成查找、对比、收藏和管理个人设备。",
       tags: ["微信小程序", "Vue / uni-app", "Java", "后台管理"],
+      facts: [
+        { value: "4端协同", label: "小程序 / 后台 / 服务端 / 数据处理" },
+        { value: "11页+", label: "核心用户页面" },
+        { value: "产品闭环", label: "查询、对比、收藏、设备管理" },
+      ],
       theme: "linear-gradient(135deg, #2a3445 0%, #0d8b84 100%)",
       caseStudy: {
+        summaryTitle: "一个面向摄影爱好者的器材产品，而不只是器材信息展示页",
         background:
           "摄影器材信息分散、参数口径不统一，用户在选购和管理设备时经常需要在多个平台间来回查资料。这个项目的目标，是把器材内容、对比能力和个人设备管理整合到同一套产品里。",
         screenshots: [
@@ -109,13 +116,20 @@ const portfolioData = {
     {
       title: "附近厕所一步导航",
       category: "微信小程序",
+      caseType: "独立产品",
       year: "2025",
       role: "个人独立开发",
       summary:
         "基于微信小程序的公共厕所查询与评价产品，围绕定位、查询、打分、内容治理与外部地图导航构建完整使用闭环，累计 2000+ 用户。",
       tags: ["微信小程序", "Spring Boot", "MyBatis-Plus", "腾讯/高德地图"],
+      facts: [
+        { value: "2000+", label: "累计用户" },
+        { value: "独立开发", label: "后端 + 小程序 + 接口接入" },
+        { value: "闭环设计", label: "定位、评价、导航" },
+      ],
       theme: "linear-gradient(135deg, #1677ff 0%, #53b3ff 100%)",
       caseStudy: {
+        summaryTitle: "从高频生活痛点出发，做一款决策链路尽可能短的小程序",
         background:
           "这个项目聚焦一个非常具体但高频的生活场景：人在陌生区域时，需要尽快找到附近可用厕所，并快速判断要不要去、怎么去。产品重点是缩短决策链路，而不是堆复杂功能。",
         screenshots: [
@@ -187,11 +201,17 @@ const portfolioData = {
     {
       title: "得眠音频微信小程序",
       category: "音频服务",
+      caseType: "独立产品",
       year: "2025",
       role: "个人独立开发",
       summary:
         "基于微信小程序、Vue 管理后台和 Spring Boot 后端构建的音频播放系统，覆盖资源管理、认证缓存和图像智能处理。",
       tags: ["微信小程序", "Vue", "Spring Boot", "MinIO"],
+      facts: [
+        { value: "前后端分离", label: "小程序 + 后台 + 服务端" },
+        { value: "媒体能力", label: "音频上传、缓存、对象存储" },
+        { value: "视觉优化", label: "K-means++ 主色分析" },
+      ],
       theme: "linear-gradient(135deg, #db5f45 0%, #ef9d56 100%)",
       highlights: [
         {
@@ -211,13 +231,20 @@ const portfolioData = {
     {
       title: "XBRL 信息披露系统",
       category: "金融系统",
+      caseType: "企业项目",
       year: "2022-至今",
       role: "Java 开发工程师",
       summary:
         "为头部券商打造的 XBRL 信息披露解决方案，覆盖报告管理、产品管理、导入导出、多级审核、模板管理与权限管理。",
       tags: ["Spring", "Spring MVC", "Hibernate", "Redis"],
+      facts: [
+        { value: "头部券商", label: "金融信息披露场景" },
+        { value: "多版本模板", label: "导入导出与映射处理" },
+        { value: "直连报送", label: "定时任务 + 异步处理" },
+      ],
       theme: "linear-gradient(135deg, #1f2430 0%, #4f5b72 100%)",
       caseStudy: {
+        summaryTitle: "在复杂模板和高准确性要求下，支撑一条稳定的信息披露与报送链路",
         background:
           "这个项目服务于头部券商的信息披露场景，核心目标是让私募定期报告和产品运行检测表能够在统一系统中完成编辑、导入导出、审核和报送，减少人工处理成本并保证报送准确性。",
         screenshots: [],
@@ -278,13 +305,20 @@ const portfolioData = {
     {
       title: "悠惠购 APP",
       category: "电商服务",
+      caseType: "企业项目",
       year: "2020-2022",
       role: "Java 开发工程师",
       summary:
         "基于 Android 客户端、CMS 后台和服务端构建的返利代下单平台，围绕订单、支付和商品上架等核心流程设计。",
       tags: ["Spring Cloud", "Spring Boot", "Vue", "Redis"],
+      facts: [
+        { value: "正式上线", label: "Android + CMS + 服务端" },
+        { value: "电商主链路", label: "订单、支付、商品上架" },
+        { value: "微服务", label: "缓存、短信、OSS 协同" },
+      ],
       theme: "linear-gradient(135deg, #5d3d2e 0%, #9f7150 100%)",
       caseStudy: {
+        summaryTitle: "围绕订单与支付主链路，做一个能支撑正式业务运行的电商系统",
         background:
           "悠惠购是一款围绕返利代下单业务构建的电商平台，包含 Android 客户端、CMS 后台和服务端系统。项目重点是让订单、支付和商品管理形成稳定闭环，并能够支撑正式上线后的并发访问和业务扩展。",
         screenshots: [],
@@ -501,16 +535,16 @@ function renderProjects() {
   elements.projectGrid.innerHTML = projects
     .map(
       (project) => `
-        <article class="project-card ${project.caseStudy ? "project-card-featured" : ""}">
+        <article class="project-card ${project.caseStudy ? "project-card-featured" : ""} ${project.caseType === "企业项目" ? "project-card-enterprise" : "project-card-product"}">
           <div class="project-cover" style="background:${project.theme}">
             <div class="project-meta">
+              <span>${project.caseType || "项目案例"}</span>
               <span>${project.category}</span>
               <span>${project.year}</span>
-              <span>${project.role}</span>
             </div>
 
             <div class="project-cover-copy">
-              <p class="project-kicker">Featured Case</p>
+              <p class="project-kicker">${project.caseType === "企业项目" ? "Enterprise Case" : "Product Case"}</p>
               <h3>${project.title}</h3>
               <p>${project.summary}</p>
             </div>
@@ -522,11 +556,31 @@ function renderProjects() {
                 <h3>${project.title}</h3>
                 <p class="project-description">${project.summary}</p>
               </div>
+              <div class="project-role-tag">${project.role}</div>
             </div>
 
             <div class="project-tags">
               ${project.tags.map((tag) => `<span class="chip">${tag}</span>`).join("")}
             </div>
+
+            ${
+              project.facts?.length
+                ? `
+                  <div class="project-facts">
+                    ${project.facts
+                      .map(
+                        (item) => `
+                          <div class="project-fact">
+                            <strong>${item.value}</strong>
+                            <span>${item.label}</span>
+                          </div>
+                        `
+                      )
+                      .join("")}
+                  </div>
+                `
+                : ""
+            }
 
             <div class="project-highlights">
               ${project.highlights
@@ -545,6 +599,14 @@ function renderProjects() {
               project.caseStudy
                 ? `
                   <div class="case-study">
+                    <div class="case-study-header">
+                      <div>
+                        <p class="case-kicker">${project.caseType === "企业项目" ? "Business Context" : "Product Overview"}</p>
+                        <h4>${project.caseStudy.summaryTitle || project.summary}</h4>
+                      </div>
+                      <p>${project.caseStudy.background}</p>
+                    </div>
+
                     ${
                       project.caseStudy.screenshots.length
                         ? `
@@ -567,46 +629,43 @@ function renderProjects() {
                         : ""
                     }
 
-                    <div class="case-block">
-                      <strong>我负责的内容</strong>
-                      <div class="case-list">
-                        ${project.caseStudy.ownership
-                          .map((item) => `<span>${item}</span>`)
-                          .join("")}
+                    <div class="case-grid">
+                      <div class="case-block case-block-emphasis">
+                        <strong>我负责的内容</strong>
+                        <div class="case-list">
+                          ${project.caseStudy.ownership
+                            .map((item) => `<span>${item}</span>`)
+                            .join("")}
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="case-block">
-                      <strong>项目背景</strong>
-                      <p>${project.caseStudy.background}</p>
-                    </div>
-
-                    <div class="case-block">
-                      <strong>核心功能</strong>
-                      <div class="case-list">
-                        ${project.caseStudy.features
-                          .map((item) => `<span>${item}</span>`)
-                          .join("")}
+                      <div class="case-block">
+                        <strong>核心功能</strong>
+                        <div class="case-list">
+                          ${project.caseStudy.features
+                            .map((item) => `<span>${item}</span>`)
+                            .join("")}
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="case-block">
-                      <strong>技术架构</strong>
-                      <div class="case-list">
-                        ${project.caseStudy.architecture
-                          .map((item) => `<span>${item}</span>`)
-                          .join("")}
+                      <div class="case-block">
+                        <strong>技术架构</strong>
+                        <div class="case-list">
+                          ${project.caseStudy.architecture
+                            .map((item) => `<span>${item}</span>`)
+                            .join("")}
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="case-block">
-                      <strong>关键难点</strong>
-                      <p>${project.caseStudy.challenge}</p>
-                    </div>
+                      <div class="case-block">
+                        <strong>关键难点</strong>
+                        <p>${project.caseStudy.challenge}</p>
+                      </div>
 
-                    <div class="case-block">
-                      <strong>项目价值</strong>
-                      <p>${project.caseStudy.result}</p>
+                      <div class="case-block case-block-wide">
+                        <strong>项目价值</strong>
+                        <p>${project.caseStudy.result}</p>
+                      </div>
                     </div>
 
                     <div class="module-grid">

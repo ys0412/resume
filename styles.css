@@ -589,6 +589,20 @@ a.button {
   gap: 1rem;
 }
 
+.project-role-tag {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.2rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(22, 32, 41, 0.08);
+  background: rgba(28, 138, 114, 0.08);
+  color: var(--accent-deep);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
 .project-head h3 {
   margin: 0;
   font-size: 1.35rem;
@@ -606,12 +620,87 @@ a.button {
   gap: 0.8rem;
 }
 
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.project-fact {
+  display: grid;
+  gap: 0.18rem;
+  padding: 0.95rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(22, 32, 41, 0.06);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(239, 245, 242, 0.9));
+}
+
+.project-fact strong {
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.project-fact span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
 .case-study,
 .case-list,
 .module-grid,
 .shot-grid {
   display: grid;
   gap: 0.8rem;
+}
+
+.case-study-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 1rem;
+  padding: 1rem 1.05rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(22, 32, 41, 0.06);
+  background: linear-gradient(135deg, rgba(28, 138, 114, 0.08), rgba(255, 255, 255, 0.92));
+}
+
+.case-kicker {
+  margin: 0 0 0.4rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.case-study-header h4,
+.case-study-header p {
+  margin: 0;
+}
+
+.case-study-header h4 {
+  font-size: 1.08rem;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+}
+
+.case-study-header p {
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.case-block-wide {
+  grid-column: span 2;
+}
+
+.case-block-emphasis {
+  background: linear-gradient(180deg, rgba(28, 138, 114, 0.08), rgba(255, 255, 255, 0.82));
 }
 
 .module-grid {
@@ -731,6 +820,29 @@ a.button {
   border-radius: var(--radius-md);
   background: rgba(20, 36, 45, 0.035);
   border: 1px solid rgba(22, 32, 41, 0.06);
+}
+
+.project-card-enterprise .project-cover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -100px 120px rgba(7, 14, 22, 0.18);
+}
+
+.project-card-enterprise .project-role-tag {
+  background: rgba(22, 32, 41, 0.06);
+  color: var(--ink);
+}
+
+.project-card-enterprise .project-fact {
+  background: linear-gradient(180deg, rgba(24, 31, 46, 0.03), rgba(255, 255, 255, 0.92));
+}
+
+.project-card-enterprise .case-study-header {
+  background: linear-gradient(135deg, rgba(24, 31, 46, 0.06), rgba(255, 255, 255, 0.94));
+}
+
+.project-card-enterprise .case-block-emphasis {
+  background: linear-gradient(180deg, rgba(24, 31, 46, 0.05), rgba(255, 255, 255, 0.82));
 }
 
 .highlight strong,
@@ -923,6 +1035,16 @@ a.button {
     grid-template-columns: 1fr;
   }
 
+  .project-facts,
+  .case-grid,
+  .case-study-header {
+    grid-template-columns: 1fr;
+  }
+
+  .case-block-wide {
+    grid-column: auto;
+  }
+
   .shot-grid {
     grid-template-columns: 1fr;
   }
@@ -967,6 +1089,10 @@ a.button {
   .timeline,
   .capability-list {
     gap: 0.9rem;
+  }
+
+  .project-head {
+    flex-direction: column;
   }
 
   .site-footer {
